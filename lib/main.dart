@@ -27,6 +27,7 @@ class _FeatureAppState extends State<FeatureApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
