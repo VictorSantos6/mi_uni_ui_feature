@@ -28,7 +28,7 @@ class MajorCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: TextButton(
                   onPressed: () {
-                    context.go(path);
+                    context.push(path);
                   },
                   child: Text(
                     name,

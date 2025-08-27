@@ -23,9 +23,9 @@ class _FeatureAppState extends State<FeatureApp> {
         path: '/',
         builder: (context, state) => HomeScreen(),
       ),
-      GoRoute(path: 'Bachillerato', builder: (context, state) => BachilleratoScreen()),
-      GoRoute(path: 'Maestria', builder: (context, state) => MaestriaScreen()),
-      GoRoute(path: 'Doctorado', builder: (context, state) => DoctoradoScreen()),
+      GoRoute(path: '/Bachillerato', builder: (context, state) => BachilleratoScreen()),
+      GoRoute(path: '/Maestria', builder: (context, state) => MaestriaScreen()),
+      GoRoute(path: '/Doctorado', builder: (context, state) => DoctoradoScreen()),
 
       
 
