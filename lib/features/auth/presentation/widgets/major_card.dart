@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mi_uni_feature/features/auth/core/constants.dart';
 
 
 
@@ -18,7 +19,7 @@ class MajorCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30)
         ),
-        color: Color.fromRGBO(9, 144, 45, 1),
+        color: Constants.colorOficial,
         child: Padding(
           padding: const EdgeInsets.all(15),
           child: Stack(
