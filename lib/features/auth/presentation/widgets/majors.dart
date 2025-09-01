@@ -5,7 +5,6 @@ import 'package:mi_uni_feature/features/auth/core/constants.dart';
 class Majors extends StatelessWidget {
   const Majors({super.key,required this.name,required this.informationOfPage});
   final String name;
-
   final String informationOfPage;
 
   @override

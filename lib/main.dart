@@ -1,11 +1,15 @@
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mi_uni_feature/features/auth/core/constants.dart' as core;
+
 import 'package:mi_uni_feature/features/auth/presentation/pages/bachillerato_screen.dart';
 import 'package:mi_uni_feature/features/auth/presentation/pages/curriculum_page.dart';
 import 'package:mi_uni_feature/features/auth/presentation/pages/doctorado_screen.dart';
 import 'package:mi_uni_feature/features/auth/presentation/pages/home_screen.dart';
 import 'package:mi_uni_feature/features/auth/presentation/pages/list_of_majors.dart';
 import 'package:mi_uni_feature/features/auth/presentation/pages/maestria_screen.dart';
+
 
 void main(){
   runApp(FeatureApp());
@@ -32,8 +36,10 @@ class _FeatureAppState extends State<FeatureApp> {
         path: '/ListaDeGrados',
         
         builder: (context, state){
-
-          return ListOfMajors();
+          final data = state.extra as Map<String, dynamic>;
+          final core.Categoria? category = data['category'] as core.Categoria?;
+          final core.Degree? degree = data['degree'] as core.Degree?;
+          return ListOfMajors(category: category, degree: degree);
         }
       ),
       GoRoute(

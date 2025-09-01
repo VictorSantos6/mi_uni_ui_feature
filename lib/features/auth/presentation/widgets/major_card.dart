@@ -1,14 +1,26 @@
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mi_uni_feature/features/auth/core/constants.dart';
 
 
 
-class MajorCard extends StatelessWidget {
+class MajorCard extends StatefulWidget {
   final String name;
   final String icon;
   final String path;
-  const MajorCard({super.key,required this.name,required this.icon,required this.path});
+  final Categoria? category;
+  final Degree? degree;
+  const MajorCard({super.key,required this.name,required this.icon,required this.path,this.category,this.degree});
+
+  @override
+  State<MajorCard> createState() => _MajorCardState();
+}
+
+class _MajorCardState extends State<MajorCard> {
+
+
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -29,10 +41,16 @@ class MajorCard extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: TextButton(
                   onPressed: () {
-                    context.push(path);
+                    context.push(
+                      widget.path,
+                      extra: {
+                        'category': widget.category,
+                        'degree': widget.degree,
+                      },
+                    );
                   },
                   child: Text(
-                    name,
+                    widget.name,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -46,7 +64,7 @@ class MajorCard extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Opacity(
                   opacity: .4,
-                  child: Image.asset(icon)
+                  child: Image.asset(widget.icon)
                 )
 
               )
