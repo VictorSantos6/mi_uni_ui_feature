@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mi_uni_feature/features/auth/config/routes.dart';
 import 'package:mi_uni_feature/features/auth/core/constants.dart';
 
 
@@ -17,6 +19,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Oferta Academica"),
+        leading: CupertinoButton(onPressed: (){
+          router.pop();
+        },
+          child: Icon(Icons.arrow_back_ios),
+        )
       ),
       body: ListView.builder(
         itemCount: Constants.homeScreenButtons.length,

@@ -1,6 +1,7 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:mi_uni_feature/features/auth/config/routes.dart';
 import 'package:mi_uni_feature/features/auth/core/constants.dart';
 
 
@@ -23,32 +24,29 @@ class _MajorCardState extends State<MajorCard> {
   
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Card(
-        elevation: 8,
-        margin: EdgeInsets.all(20),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30)
-        ),
-        color: Constants.colorOficial,
-        child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Stack(
-            children: [
-
-              Align(
-                alignment: Alignment.centerLeft,
-                child: TextButton(
-                  onPressed: () {
-                    context.push(
-                      widget.path,
-                      extra: {
-                        'category': widget.category,
-                        'degree': widget.degree,
-                      },
-                    );
-                  },
+    return CupertinoButton(
+      pressedOpacity: 0.65,
+      onPressed: () => router.push(widget.path, extra: {
+        'category' : widget.category,
+        'degree' : widget.degree
+      }),
+      padding: EdgeInsets.zero,
+      child: SizedBox(
+        height: 150,
+        child: Card(
+          elevation: 8,
+          margin: EdgeInsets.all(20),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30)
+          ),
+          color: Constants.colorOficial,
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Stack(
+              children: [
+      
+                Align(
+                  alignment: Alignment.centerLeft,
                   child: Text(
                     widget.name,
                     style: TextStyle(
@@ -58,17 +56,17 @@ class _MajorCardState extends State<MajorCard> {
                     ),
                   ),
                 ),
-              ),
-          
-              Align(
-                alignment: Alignment.centerRight,
-                child: Opacity(
-                  opacity: .4,
-                  child: Image.asset(widget.icon)
+            
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Opacity(
+                    opacity: .4,
+                    child: Image.asset(widget.icon)
+                  )
+      
                 )
-
-              )
-            ],
+              ],
+            ),
           ),
         ),
       ),

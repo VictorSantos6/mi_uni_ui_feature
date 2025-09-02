@@ -17,39 +17,39 @@ class ListOfMajors extends StatelessWidget {
       case Categoria.cienciasAgricolas:
         if (degree == Degree.bachillerato) {
           majors = Constants.agriculturalMajors;
-          title = "Ciencias Agrícolas (Bachillerato)";
+          title = "Ciencias Agrícolas ";
         } else if (degree == Degree.maestria) {
           majors = Constants.agriculturalMastersMajors;
-          title = "Ciencias Agrícolas (Maestría)";
+          title = "Ciencias Agrícolas ";
         } else if (degree == Degree.doctorado) {
           majors = Constants.agriculturalDoctorateMajors;
-          title = "Ciencias Agrícolas (Doctorado)";
+          title = "Ciencias Agrícolas ";
         }
         break;
 
       case Categoria.artesYciencias:
         if (degree == Degree.bachillerato) {
           majors = Constants.artsAndSciencesMajors;
-          title = "Artes y Ciencias (Bachillerato)";
+          title = "Artes y Ciencias";
         } else if (degree == Degree.maestria) {
           majors = Constants.artsAndSciencesMastersMajors;
-          title = "Artes y Ciencias (Maestría)";
+          title = "Artes y Ciencias ";
         } else if (degree == Degree.doctorado) {
           majors = Constants.artsAndSciencesDoctorateMajors;
-          title = "Artes y Ciencias (Doctorado)";
+          title = "Artes y Ciencias ";
         }
         break;
 
       case Categoria.adem:
         if (degree == Degree.bachillerato) {
           majors = Constants.ademMajors;
-          title = "Administración de Empresas (Bachillerato)";
+          title = "Administración de Empresas";
         } else if (degree == Degree.maestria) {
           majors = Constants.ademMastersMajors;
-          title = "Administración de Empresas (Maestría)";
+          title = "Administración de Empresas ";
         } else if (degree == Degree.doctorado) {
           majors = Constants.inmeDoctorateMajors;
-          title = "Administración de Empresas (Doctorado)";
+          title = "Administración de Empresas ";
         }
         break;
 
@@ -57,13 +57,13 @@ class ListOfMajors extends StatelessWidget {
       default:
         if (degree == Degree.bachillerato) {
           majors = Constants.engineeringMajors;
-          title = "Ingeniería (Bachillerato)";
+          title = "Ingeniería ";
         } else if (degree == Degree.maestria) {
           majors = Constants.engineeringMastersMajors;
-          title = "Ingeniería (Maestría)";
+          title = "Ingeniería";
         } else if (degree == Degree.doctorado) {
           majors = Constants.engineeringDoctorateMajors;
-          title = "Ingeniería (Doctorado)";
+          title = "Ingeniería";
         }
         break;
     }
@@ -78,15 +78,22 @@ class ListOfMajors extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextField(
+              cursorColor: Colors.black,
               decoration: InputDecoration(
                 prefixIcon: Icon(Icons.search),
                 hintText: "Buscar",
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(40),
+                  borderSide: BorderSide(color: Colors.black),
+                ),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(40)
+                  borderRadius: BorderRadius.circular(40),
+                  borderSide: BorderSide(color: Colors.black),
                 )
               ),
             ),
           ),
+          SizedBox(height: 15,),
           Expanded(
             child: ListView.builder(
               itemCount: majors.length,
