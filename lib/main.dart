@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:mi_uni_feature/features/auth/config/routes.dart';
+import 'package:mi_uni_feature/config/route/routes.dart';
 
 void main(){
   runApp(FeatureApp());
