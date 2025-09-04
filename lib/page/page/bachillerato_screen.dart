@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mi_uni_feature/config/route/routes.dart';
 import 'package:mi_uni_feature/core/data/const/assets.dart';
 import 'package:mi_uni_feature/core/data/const/constants.dart';
 import 'package:go_router/go_router.dart';

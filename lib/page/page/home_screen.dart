@@ -28,8 +28,8 @@ class _HomeScreenState extends State<HomeScreen> {
             return top(context);
           }
           return tile();
-          }
-          ),
+        }
+      ),
     );
   }
 
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.zero,
       child: SizedBox(
         height: 150,
-        child: Card(
+        child: Card( 
           elevation: 8,
           margin: EdgeInsets.all(20),
           shape: RoundedRectangleBorder(

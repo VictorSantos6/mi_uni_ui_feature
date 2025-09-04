@@ -52,9 +52,9 @@ class CurriculumPage extends StatelessWidget {
                       child: ReadMoreText(
                         textAlign: TextAlign.center,
                          'This is placeholder text for Major 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit amet arcu at risus pharetra gravida. '
-        'Aliquam erat volutpat. Phasellus malesuada erat id lectus consequat, vitae finibus lacus dictum. '
-        'Donec consequat orci at semper viverra. Morbi fringilla, sapien in varius accumsan, elit nisi efficitur sapien, sed facilisis velit ligula nec metus. '
-        'Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+                          'Aliquam erat volutpat. Phasellus malesuada erat id lectus consequat, vitae finibus lacus dictum. '
+                          'Donec consequat orci at semper viverra. Morbi fringilla, sapien in varius accumsan, elit nisi efficitur sapien, sed facilisis velit ligula nec metus. '
+                          'Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
                         trimLines: 5,
                         trimMode: TrimMode.Line,
                         trimCollapsedText: "\n...Leer mas",
